@@ -11,6 +11,8 @@ Changelog
   [Matej Cotman]
 - Logging to ~/.tarman.log
   [Matej Cotman]
+- Added view toggle for hidden files/subdirectories
+  [Shaun Marshall]
 
 
 0.1.2 (2013-08-13)
