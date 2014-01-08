@@ -50,7 +50,7 @@ Key bindings
 ============
 
 Key bindings are listed in HELP window,
-you can access it by pressing *h* or *?* key.
+you can access it by pressing the *?* key.
 
 {help_string}
 
