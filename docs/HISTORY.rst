@@ -4,6 +4,8 @@ Changelog
 0.1.4 (unreleased)
 ------------------
 
+- Added backwards (from init dir) and shift-arrow navigation
+  [Shaun Marshall]
 - Refactor unicode support for lower level functions.
   [Matej Cotman]
 - Fixed Hydra build error.

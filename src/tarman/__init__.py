@@ -52,7 +52,8 @@ class Main(object):
         self.area = None
         self.container = FileSystem()
         self.directory = self.container.abspath(directory)
-        self.checked = DirectoryTree(self.directory, self.container)
+        self.root_directory = '/'
+        self.checked = DirectoryTree(self.root_directory, self.container)
         self.show_hiddens = show_hiddens
         self.chdir(self.directory)
 
@@ -100,9 +101,6 @@ class Main(object):
 
     def chdir(self, newpath):
         if newpath is None:
-            return False
-
-        if not newpath.startswith(self.directory):
             return False
 
         try:
@@ -221,10 +219,10 @@ class Main(object):
             elif self.ch == curses.KEY_DOWN:
                 self.area.set_params(h, offset=1)
 
-            elif self.ch == curses.KEY_PPAGE:
+            elif self.ch in [curses.KEY_PPAGE, curses.KEY_SR]:
                 self.area.set_params(h, offset=-5)
 
-            elif self.ch == curses.KEY_NPAGE:
+            elif self.ch in [curses.KEY_NPAGE, curses.KEY_SF]:
                 self.area.set_params(h, offset=5)
 
             elif self.ch == 32:
